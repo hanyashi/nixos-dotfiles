@@ -7,19 +7,12 @@
     ../../modules/system/audio.nix
     ../../modules/system/desktop.nix
     ../../modules/system/gaming.nix
+    ../../modules/system/secure-boot.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # bootloader
-  boot.loader.systemd-boot.enable = lib.mkForce false;
-  boot.loader.efi.canTouchEfiVariables = true;
-  
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/var/lib/sbctl";
-  };
-
+  # boot
   boot.initrd.luks.devices."root" = {
     device = "/dev/disk/by-uuid/0b238293-bd36-4495-8d67-1bdd7dac46de";
     preLVM = true;
@@ -49,7 +42,7 @@
   # cli
   environment.systemPackages = with pkgs; [
     vim wget git gh fastfetch kitty
-    pciutils sbctl brightnessctl docker coreutils qdirstat
+    pciutils brightnessctl docker coreutils qdirstat
     btop lon xev evtest libinput nodejs
   ];
 
