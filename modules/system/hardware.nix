@@ -39,7 +39,6 @@ in
   boot.kernelParams = [ "usbhid.quirks=0x248a:0xfb01:0x00000040" ];
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
   hardware.bluetooth.settings = {
     General = {
       Enable = "Source,Sink,Media,Socket";
