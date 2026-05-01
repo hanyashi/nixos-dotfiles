@@ -21,6 +21,11 @@
         ./hosts/laptop/configuration.nix
         lanzaboote.nixosModules.lanzaboote
         home-manager.nixosModules.home-manager
+        {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.hanyashi = import ./modules/home/default.nix;
+          }
       ];
     };
   };
