@@ -24,11 +24,13 @@
     device = "/dev/disk/by-uuid/0b238293-bd36-4495-8d67-1bdd7dac46de";
     preLVM = true;
   };
-
+  
+  #
   networking.hostName = "nixos"; 
   networking.networkmanager.enable = true;
   time.timeZone = "Asia/Manila";
   i18n.defaultLocale = "en_PH.UTF-8";
+  
   # 
   users.users.hanyashi = {
     isNormalUser = true;
@@ -36,6 +38,12 @@
     extraGroups = [ "networkmanager" "wheel" "video" "docker" ];
   };
 
+  # 
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1w"
+  ];
+
+  # virtualization
   virtualisation.docker.enable = true;
 
   # cli
