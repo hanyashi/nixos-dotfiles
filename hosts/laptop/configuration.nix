@@ -31,11 +31,6 @@
     extraGroups = [ "networkmanager" "wheel" "video" "docker" ];
   };
 
-  # 
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1w"
-  ];
-
   # virtualization
   virtualisation.docker.enable = true;
 
