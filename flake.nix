@@ -7,10 +7,10 @@
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.backupFileExtension = "backup"; 
-      home-manager.users.hanyashi = import ./modules/home/default.nix;
+      useGlobalPkgs = true;
+      useUserPackages = true;
+      backupFileExtension = "backup"; 
+      users.hanyashi = import ./modules/home/default.nix;
     };
 
     lanzaboote = {
