@@ -9,7 +9,6 @@
     enable = true;
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
-      delgtk = "rm ~/.gtkrc-2.0.backup";
     };
   };
 
