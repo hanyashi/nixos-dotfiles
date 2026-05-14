@@ -25,7 +25,7 @@
 
   environment.systemPackages = with pkgs; [
     firefox discord rofi discord-ptb obs-studio vscode
-    vlc spotify teams-for-linux imagemagick lmms
+    vlc spotify teams-for-linux imagemagick lmms unrar
     (python3.withPackages (ps: with ps; [ pywal haishoku ])) 
   ];
 }
