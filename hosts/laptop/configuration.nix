@@ -49,5 +49,11 @@
     options = "--delete-older-than 7d";
   };
 
+  programs.direnv = {
+  enable = true;
+  enableBashIntegration = true; # Swap for enableZshIntegration if needed
+  nix-direnv.enable = true;
+  };
+
   system.stateVersion = "25.11"; 
 }
