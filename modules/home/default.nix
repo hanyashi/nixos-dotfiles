@@ -4,15 +4,11 @@
   home.username = "hanyashi";
   home.homeDirectory = "/home/hanyashi";
   home.stateVersion = "25.11";
-
-  home.file.".gtkrc-2.0".force = true;
-  xdg.configFile."gtk-3.0/settings.ini".force = true;
-  xdg.configFile."gtk-4.0/settings.ini".force = true;
   
   programs.bash = {
     enable = true;
     shellAliases = {
-      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
+      nrs = "rm ~/.gtkrc-2.0.backup && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
     };
   };
 
