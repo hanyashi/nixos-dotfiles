@@ -9,17 +9,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote";
-    };
+    # lanzaboote = {
+    #   url = "github:nix-community/lanzaboote";
+    # };
   };
 
-  outputs = { self, nixpkgs, home-manager, lanzaboote, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/laptop/configuration.nix
-        lanzaboote.nixosModules.lanzaboote
+        # lanzaboote.nixosModules.lanzaboote
         home-manager.nixosModules.home-manager
         {
             home-manager.useGlobalPkgs = true;
