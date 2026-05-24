@@ -28,7 +28,8 @@
   '';
 
   boot.loader.limine.extraEntries = ''
-    /Windows 11
+    /Windows Boot Manager
+    //Windows 11
     comment: Windows Boot Manager
     protocol: efi_chainload
     image_path: guid(24e9f9e4-d0b7-4c03-a678-4d2c3f144ea6):/EFI/Microsoft/Boot/bootmgfw.efi
