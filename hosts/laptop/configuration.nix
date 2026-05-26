@@ -1,7 +1,4 @@
-{ config, pkgs, lib, inputs, plank-reloaded, ... }:
-let
-  plankPkg = plank-reloaded.packages.${pkgs.system}.default;
-in
+{ config, pkgs, lib, inputs, ... }:
 {
   imports = [ 
     ./hardware-configuration.nix
@@ -41,7 +38,7 @@ in
   environment.systemPackages = with pkgs; [
     vim wget git gh fastfetch kitty
     pciutils brightnessctl docker coreutils qdirstat
-    btop lon xev evtest libinput nodejs plankPkg
+    btop lon xev evtest libinput nodejs
   ];
 
   # maintenance

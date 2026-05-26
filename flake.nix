@@ -9,19 +9,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    plank-reloaded = {
-        url = "github:zquestz/plank-reloaded";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # plank-reloaded = {
+    #     url = "github:zquestz/plank-reloaded";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # lanzaboote = {
     #   url = "github:nix-community/lanzaboote";
     # };
   };
 
-  outputs = { self, nixpkgs, home-manager, plank-reloaded, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs plank-reloaded; };
+      specialArgs = { inherit inputs; };
       modules = [
         ./hosts/laptop/configuration.nix
         # lanzaboote.nixosModules.lanzaboote
