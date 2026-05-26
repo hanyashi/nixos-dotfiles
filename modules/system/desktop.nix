@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
-let 
-  plank-rld = plank-reloaded.defaultPackage.${pkgs.system};
-in {
+
+{
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = false;
   services.desktopManager.plasma6.enable = true;
@@ -27,7 +26,6 @@ in {
   environment.systemPackages = with pkgs; [
     firefox discord rofi discord-ptb obs-studio vscode
     vlc spotify teams-for-linux imagemagick lmms unrar
-    plank-rld
     (python3.withPackages (ps: with ps; [ pywal haishoku ])) 
   ];
 }
