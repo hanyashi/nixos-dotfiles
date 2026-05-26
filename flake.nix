@@ -24,7 +24,6 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/laptop/configuration.nix
-        ../../modules/system/desktop.nix
         # lanzaboote.nixosModules.lanzaboote
         home-manager.nixosModules.home-manager
         {
