@@ -21,7 +21,7 @@
 
   outputs = { self, nixpkgs, home-manager, plank-reloaded, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs plank-reloaded; };
       modules = [
         ./hosts/laptop/configuration.nix
         # lanzaboote.nixosModules.lanzaboote
