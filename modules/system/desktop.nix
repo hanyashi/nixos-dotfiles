@@ -1,4 +1,4 @@
-{ config, pkgs, plank-reloaded ... }:
+{ config, pkgs, plank-reloaded, ... }:
 let 
   plank-reloaded = plank-reloaded.defaultPackage.${pkgs.system};
 in {
