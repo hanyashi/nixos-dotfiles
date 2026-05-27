@@ -1,7 +1,7 @@
-{ config, pkgs, nixpkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
-  overlays = [ inputs.millennium.overlays.default ];
+  nixpkgs.overlays = [ inputs.millennium.overlays.default ];
 
   services.flatpak.enable = true;
 
