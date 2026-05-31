@@ -49,6 +49,8 @@
     options = "--delete-older-than 7d";
   };
 
+  zramSwap.enable = true;
+
   programs.direnv = {
   enable = true;
   enableBashIntegration = true; # Swap for enableZshIntegration if needed
