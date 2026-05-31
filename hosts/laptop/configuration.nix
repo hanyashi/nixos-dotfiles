@@ -57,7 +57,7 @@
 
   services.earlyoom = {
     enable = true;
-  }
+  };
 
   system.stateVersion = "25.11"; 
 }
