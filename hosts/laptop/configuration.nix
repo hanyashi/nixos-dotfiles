@@ -55,5 +55,9 @@
   nix-direnv.enable = true;
   };
 
+  services.earlyoom = {
+    enable = true;
+  }
+
   system.stateVersion = "25.11"; 
 }
