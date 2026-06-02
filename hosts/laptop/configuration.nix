@@ -36,7 +36,7 @@
 
   # cli
   environment.systemPackages = with pkgs; [
-    vim wget git gh fastfetch kitty
+    wget git gh fastfetch kitty
     pciutils brightnessctl docker coreutils qdirstat
     btop lon xev evtest libinput nodejs
   ];
