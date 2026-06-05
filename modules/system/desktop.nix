@@ -29,6 +29,6 @@
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    konsole kate gwenview okular elisa ark
+    konsole kate gwenview okular elisa
   ];
 }
