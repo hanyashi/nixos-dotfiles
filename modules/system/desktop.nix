@@ -19,7 +19,7 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     libGL glib xorg.libX11 xorg.libXext libxkbcommon fontconfig freetype
-    xorg.libxcb xorg.xcbutil xorg.xcbutilwm xorg.xcbutilimage
+    xorg.libxcb xorg.xcbutil xorg.xcbutilwm xorg.xcbutilimage scrcpy
     xorg.xcbutilkeysyms xorg.xcbutilrenderutil xorg.libSM xorg.libICE
   ];
 
