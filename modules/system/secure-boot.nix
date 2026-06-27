@@ -32,7 +32,7 @@
     //Windows 11
     comment: Windows Boot Manager
     protocol: efi_chainload
-    image_path: guid(24e9f9e4-d0b7-4c03-a678-4d2c3f144ea6):/EFI/Microsoft/Boot/bootmgfw.efi
+    image_path: uuid(F283-B148):/EFI/Microsoft/Boot/bootmgfw.efi
   '';
 
   environment.systemPackages = with pkgs; [
