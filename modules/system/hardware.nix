@@ -10,7 +10,7 @@ let
         owner = "keenplify";
         repo = "hid-rakk-dasig-x";
         rev = "master"; 
-        sha256 = "sha256-Ig0J1a2vfbdya8qNw8VY0oZPiqCYqDSUCX286TPYcr0=";
+        sha256 = "sha256-k7Qp8oorxI/ew+ecCliWU+l6Jdbg6ot/t8w/UWaLP7U=";
       };
 
       patchPhase = ''
