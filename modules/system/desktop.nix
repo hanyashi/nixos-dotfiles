@@ -19,8 +19,8 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     libGL glib libx11 libxext libxkbcommon fontconfig freetype
-    xorg.libxcb xorg.xcbutil xorg.xcbutilwm xorg.xcbutilimage
-    xorg.xcbutilkeysyms xorg.xcbutilrenderutil xorg.libSM xorg.libICE
+    libxcb libxcb-util libxcb-wm libxcb-image
+    libxcb-keysyms libxcb-render-util libsm libice
   ];
 
   environment.systemPackages = with pkgs; [
