@@ -2,7 +2,7 @@
   description = "modular nixos config setup + flakes";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     millennium.url = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
     
