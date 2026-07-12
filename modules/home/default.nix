@@ -18,6 +18,7 @@
     slurp
     grim
     wl-clipboard
+    brightnessctl
   ];
 
   home.pointerCursor = {
