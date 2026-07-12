@@ -3,7 +3,7 @@
 {
   home.username = "hanyashi";
   home.homeDirectory = "/home/hanyashi";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
   
   programs.bash = {
     enable = true;
