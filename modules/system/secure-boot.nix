@@ -5,7 +5,7 @@
   boot.loader.limine.enable = true;
   boot.loader.limine.secureBoot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
- 
+  
   # boot.lanzaboote = {
   #   enable = true;
   #   pkiBundle = "/var/lib/sbctl";
@@ -14,8 +14,8 @@
   boot.loader.limine.style = {
     interface = {
       branding = "NixOS Bootloader";
-      brandingColor = 6;
-      helpColor = 6;
+      brandingColor = "6";
+      helpColor = "6";
     };
     graphicalTerminal = {
       background = "0a0000";
