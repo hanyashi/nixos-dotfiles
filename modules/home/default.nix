@@ -5,14 +5,14 @@ let
     name = "bibata-modern-darkred";
     src = ./Bibata-Modern-DarkRed; 
     
-    # bypass the default archive unpacker and builder
+    # Bypass the default archive unpacker and builder
     dontUnpack = true;
     dontBuild = true;
     
     installPhase = ''
       mkdir -p $out/share/icons/Bibata-Modern-DarkRed
-      # Copy directly from the Nix store path 
-      cp -R ${src}/* $out/share/icons/Bibata-Modern-DarkRed/
+      # Use $src (Bash variable) instead of ${src} (Nix variable)
+      cp -R $src/* $out/share/icons/Bibata-Modern-DarkRed/
     '';
   };
 in
