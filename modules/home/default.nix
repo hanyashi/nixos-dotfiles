@@ -1,5 +1,17 @@
 { config, pkgs, ... }:
 
+let
+  customBibata = pkgs.stdenv.mkDerivation {
+    name = "bibata-modern-darkred";
+    # Point this to the downloaded folder or archive next to this file
+    src = ./Bibata-Modern-DarkRed; 
+    
+    installPhase = ''
+      mkdir -p $out/share/icons/Bibata-Modern-DarkRed
+      cp -R ./* $out/share/icons/Bibata-Modern-DarkRed/
+    '';
+  };
+in
 {
   home.username = "hanyashi";
   home.homeDirectory = "/home/hanyashi";
@@ -23,7 +35,7 @@
 
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.bibata-cursors;
+    package = customBibata;
     name = "Bibata-Modern-DarkRed";
     size = 24;
   };
