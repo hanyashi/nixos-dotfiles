@@ -9,8 +9,10 @@ let
     dontBuild = true;
     
     installPhase = ''
+      # Create the destination directory
       mkdir -p $out/share/icons/Bibata-Modern-DarkRed
-      cp -R $src/* $out/share/icons/Bibata-Modern-DarkRed/
+      # Copy all files from the current folder (.) into the destination
+      cp -r . $out/share/icons/Bibata-Modern-DarkRed/
     '';
   };
 in
