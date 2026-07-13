@@ -3,7 +3,6 @@
 let
   customBibata = pkgs.stdenv.mkDerivation {
     name = "bibata-modern-darkred";
-    # Point this to the downloaded folder or archive next to this file
     src = ./Bibata-Modern-DarkRed; 
     
     installPhase = ''
