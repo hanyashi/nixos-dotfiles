@@ -25,7 +25,7 @@
 
   environment.systemPackages = with pkgs; [
     firefox discord rofi discord-ptb obs-studio vscode scrcpy
-    vlc spotify imagemagick lmms unrar unzip droidcam
+    vlc spotify imagemagick lmms unrar unzip droidcam imv
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
