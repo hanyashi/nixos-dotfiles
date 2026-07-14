@@ -38,10 +38,22 @@ in
   ];
 
   home.pointerCursor = {
-    gtk.enable = true;
-    package = customBibata;
     name = "Bibata-Modern-DarkRed";
     size = 24;
+    package = pkgs.stdenvNoCC.mkDerivation {
+      name = "bibata-modern-darkred"; 
+      src = ./Bibata-Modern-DarkRed; 
+      
+      dontConfigure = true;
+      dontBuild = true;
+      
+      installPhase = ''
+        mkdir -p $out/share/icons/Bibata-Modern-DarkRed
+        cp -R . $out/share/icons/Bibata-Modern-DarkRed/
+      '';
+    };
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   gtk = {
